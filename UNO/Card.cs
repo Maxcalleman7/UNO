@@ -16,6 +16,11 @@ namespace UNO
             this.value = value;
         }
 
+        public override string ToString()
+        {
+            return $"{color} {value}";
+        }
+
 
 
 

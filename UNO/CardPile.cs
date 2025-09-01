@@ -35,11 +35,18 @@ namespace UNO
                 cards.Add(new Card("Black", "Change color"));
             }
         }
-        
-        public void shuffleCardS()
+
+        public void ShuffleCards()
         {
             Random rand = new Random();
-            
+            int n = cards.Count;
+            for (int i = 0; i < n - 1; i++)
+            {
+                int j = rand.Next(i, n);
+                var temp = cards[i];
+                cards[i] = cards[j];
+                cards[j] = temp;
+            }
         }
     }
 }
