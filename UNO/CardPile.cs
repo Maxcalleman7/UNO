@@ -41,8 +41,5 @@ namespace UNO
             Random rand = new Random();
             
         }
-
-
-        //Add Card logic here
     }
 }
