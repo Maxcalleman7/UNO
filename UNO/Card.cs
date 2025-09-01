@@ -8,6 +8,17 @@ namespace UNO
 {
     internal class Card
     {
-        //Add Card logic here
+        private string color;
+        private string value;
+        public Card(string color, string value)
+        {
+            this.color = color;
+            this.value = value;
+        }
+
+
+
+
+
     }
 }
