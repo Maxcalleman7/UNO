@@ -7,10 +7,15 @@ class Program
     {
         Console.WriteLine("PLAY UNO!");
 
+
+
+
         
 
         CardPile pile = new CardPile();
         pile.CreateNewCardPile();
+        pile.GetFirstCard().ShowCard(); //test
         pile.ShuffleCards();
+        
     }
 }

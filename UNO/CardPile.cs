@@ -46,7 +46,12 @@ namespace UNO
                 var temp = cards[i];
                 cards[i] = cards[j];
                 cards[j] = temp;
+
+                
             }
         }
+
+        public Card GetFirstCard() //hämtar första kortet i högen, skapa separat metod för att dra, annars stannar kortet i högen
+        { return cards[0]; }
     }
 }
