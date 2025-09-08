@@ -46,6 +46,8 @@ namespace UNO
                 var temp = cards[i];
                 cards[i] = cards[j];
                 cards[j] = temp;
+
+                
             }
         }
     }
