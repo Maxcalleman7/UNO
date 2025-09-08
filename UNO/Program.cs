@@ -3,19 +3,25 @@
 
 class Program
 {
-    public static void Main()
+    public static void StartNewGame()
+
     {
-        Console.WriteLine("PLAY UNO!");
-
-
-
-
-        
-
         CardPile pile = new CardPile();
         pile.CreateNewCardPile();
         pile.GetFirstCard().ShowCard(); //test
         pile.ShuffleCards();
         
+    }
+    public static void Main()
+    {
+        Console.WriteLine("PLAY UNO!");
+        StartNewGame();
+
+        PlayerHandler handler = new PlayerHandler();
+        int numPlayers = handler.NumberOfPlayers();
+
+        
+        handler.CreatePlayers(numPlayers);
+
     }
 }
