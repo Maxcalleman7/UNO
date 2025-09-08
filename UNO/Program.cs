@@ -15,6 +15,11 @@ class Program
         Console.WriteLine("PLAY UNO!");
         StartNewGame();
 
+        PlayerHandler handler = new PlayerHandler();
+        int numPlayers = handler.NumberOfPlayers();
+
+        
+        handler.CreatePlayers(numPlayers);
 
     }
 }
