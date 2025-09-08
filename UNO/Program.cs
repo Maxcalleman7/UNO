@@ -16,6 +16,8 @@ class Program
         pile.CreateNewCardPile();
         pile.GetFirstCard().ShowCard(); //test
         pile.ShuffleCards();
+
+        CardPile gamepile = new CardPile();
         
     }
 }

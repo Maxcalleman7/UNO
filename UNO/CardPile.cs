@@ -53,5 +53,12 @@ namespace UNO
 
         public Card GetFirstCard() //hämtar första kortet i högen, skapa separat metod för att dra, annars stannar kortet i högen
         { return cards[0]; }
+
+        public Card DrawCard( Card Drew, int drewPos)
+        {
+            cards.RemoveAt(drewPos);
+
+            return Drew;
+        }
     }
 }
