@@ -13,7 +13,7 @@ namespace UNO
 
         List<string> name = new List<string> { 
             "0", "1","1", "2","2", "3","3", "4","4", "5","5", "6","6", "7","7", "8","8", "9","9",
-            "Block", "Block", "Reverse", "Reverse","Draw two","Draw two"};
+            "Block", "Block", "Reverse", "Reverse","Draw_two","Draw_two"};
 
         List<Card> cards = new List<Card>();
 
@@ -31,8 +31,8 @@ namespace UNO
 
             for(int k = 0; k < 4; k++)
             {
-                cards.Add(new Card("Black", "Draw four"));
-                cards.Add(new Card("Black", "Change color"));
+                cards.Add(new Card("Black", "Draw_four"));
+                cards.Add(new Card("Black", "Change_color"));
             }
         }
 
