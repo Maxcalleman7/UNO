@@ -12,6 +12,8 @@ class Program
 
         
 
-        
+        CardPile pile = new CardPile();
+        pile.CreateNewCardPile();
+        pile.ShuffleCards();
     }
 }
