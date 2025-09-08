@@ -16,7 +16,14 @@ namespace UNO
             this.value = value;
         }
 
-        
+        public string ShowCard()
+        {
+            string shown_card="";
+            ;
+            shown_card=color.ToString();
+            shown_card=shown_card+ value.ToString();
+            return null;
+        }
 
 
 
