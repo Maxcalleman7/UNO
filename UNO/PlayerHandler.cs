@@ -8,9 +8,10 @@ namespace UNO
 {
     public class PlayerHandler
     {
+        public List<Player> players {  get; private set; }
         public PlayerHandler() 
         {
-
+            players = new List<Player>();
 
 
         }
@@ -27,7 +28,7 @@ namespace UNO
             return numPlayers;
             
         }
-        List<Player> players = new List<Player>();
+        
         public void CreatePlayers(int numPlayers) //Skapa spelare
         {
 
