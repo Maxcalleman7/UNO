@@ -19,9 +19,9 @@ class Program
         
     }
 
-    public static bool CheckColourAndNumber(Card playerCards, Card topCard)
+    public static bool CheckColorAndNumber(Card playerCards, Card topCard)
     {
-        if (playerCards.colours.Equals(topCard)) return true;
+        if (playerCards.color.Equals(topCard)|| playerCards.name.Equals(topCard)) return true;
         else return false;
 
     }

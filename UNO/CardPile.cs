@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace UNO
 {
-    internal class CardPile
+    public class CardPile
     {
         List<string> colors = new List<string> { "Red", "Blue", "Green", "Yellow" }; 
 
