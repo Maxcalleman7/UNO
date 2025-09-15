@@ -3,16 +3,24 @@
 
 class Program
 {
+    public static void StartNewGame()
+
+    {
+        CardPile pile = new CardPile();
+        pile.CreateNewCardPile();
+        pile.GetFirstCard().ShowCard(); //test
+        pile.ShuffleCards();
+        
+    }
     public static void Main()
     {
         Console.WriteLine("PLAY UNO!");
+        StartNewGame();
+
+        PlayerHandler handler = new PlayerHandler();
+        int numPlayers = handler.NumberOfPlayers();
 
         
-
-        CardPile pile = new CardPile();
-        pile.CreateNewCardPile();
-        pile.GetFirstCard().ShowCard();
-        pile.ShuffleCards();
-        
+        handler.CreatePlayers(numPlayers);
     }
 }
