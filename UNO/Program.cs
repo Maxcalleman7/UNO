@@ -3,15 +3,10 @@
 
 class Program
 {
-    public static CardPile StartNewGame()
+    public static CardPile CreateDeck()
 
     {
-        PlayerHandler handler = new PlayerHandler();
-        int numPlayers = handler.NumberOfPlayers();
-
-
-        handler.CreatePlayers(numPlayers);
-
+        
         CardPile pile = new CardPile();
         pile.CreateNewCardPile();
         pile.GetFirstCard().ShowCard(); //test
@@ -32,10 +27,10 @@ class Program
     }
     public static void Main()
     {
-        CardPile hiddenPile=StartNewGame();
+        CardPile hiddenPile=CreateDeck();
 
         Console.WriteLine("PLAY UNO!");
-        StartNewGame();
+        CreateDeck();
         
 
         PlayerHandler handler = new PlayerHandler();
