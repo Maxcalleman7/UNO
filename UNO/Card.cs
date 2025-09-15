@@ -17,18 +17,28 @@ namespace UNO
         }
 
         public void ShowCard()  //konverterar kortets färg och värde till sträng, skriver ut det, men ej på ny rad så att korten visas som (kort1 kort2) och inte (kort1
-                                                                                                                                                                 //kort2)
+                                //kort2)
         {
-            string shown_card="[";
-            
-            shown_card=shown_card+ color.ToString();
-            shown_card=shown_card+" "+ name.ToString()+"] ";
+            string shown_card = "[";
+
+            shown_card = shown_card + color.ToString();
+            shown_card = shown_card + " " + name.ToString() + "] ";
             Console.Write(shown_card);
         }
 
+        public void CheckBlock()
+        {
+            if (name == "Block")
+            {
+                Console.WriteLine("Next player is blocked!");
+
+
+            }
 
 
 
 
+
+        }
     }
 }
