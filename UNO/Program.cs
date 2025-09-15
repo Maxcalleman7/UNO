@@ -23,7 +23,5 @@ class Program
         Console.WriteLine("PLAY UNO!");
         StartNewGame();
 
-        handler.CreatePlayers(numPlayers);
-
     }
 }
