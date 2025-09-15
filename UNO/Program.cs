@@ -22,6 +22,5 @@ class Program
 
         
         handler.CreatePlayers(numPlayers);
-
     }
 }
