@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UNO
 {
-    internal class Card
+    public class Card
     {
         private string color;
         private string value;
