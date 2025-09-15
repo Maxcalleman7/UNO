@@ -18,6 +18,13 @@ class Program
         pile.ShuffleCards();
         
     }
+
+    public static bool CheckColourAndNumber(Card playerCards, Card topCard)
+    {
+        if (playerCards.colours.Equals(topCard)) return true;
+        else return false;
+
+    }
     public static void Main()
     {
         Console.WriteLine("PLAY UNO!");
