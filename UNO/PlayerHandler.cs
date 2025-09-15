@@ -8,27 +8,40 @@ namespace UNO
 {
     public class PlayerHandler
     {
+
         public List<Player> players {  get; private set; }
         public PlayerHandler() 
+
         {
             players = new List<Player>();
 
 
         }
-            
+
         public int NumberOfPlayers() //Hämta antalet spelare
         {
-            Console.WriteLine("Enter number of players (2-4): ");
-            int numPlayers = int.Parse(Console.ReadLine());
-            while (numPlayers < 2 || numPlayers > 4)
+            try
             {
-                Console.WriteLine("Invalid number of players. Please enter a number between 2 and 4: ");
-                numPlayers = int.Parse(Console.ReadLine());
+                Console.WriteLine("Enter number of players (2-4): ");
+                int numPlayers = int.Parse(Console.ReadLine());
+                while (numPlayers < 2 || numPlayers > 4)
+                {
+                    Console.WriteLine("Invalid number of players. Please enter a number between 2 and 4: ");
+                    numPlayers = int.Parse(Console.ReadLine());
+                }
+                return numPlayers;
             }
-            return numPlayers;
-            
+            catch (FormatException)
+            {
+                Console.WriteLine("Invalid input. Please enter a valid number between 2 and 4.");
+                return NumberOfPlayers();
+
+                
+            }
         }
-        
+
+        List<Player> players = new List<Player>();
+
         public void CreatePlayers(int numPlayers) //Skapa spelare
         {
 
@@ -37,9 +50,9 @@ namespace UNO
                 Player player = new Player();
                 player.GetName();
                 players.Add(player);
-                
+
             }
-        }
+        } 
 
     }
 }

@@ -6,6 +6,12 @@ class Program
     public static CardPile StartNewGame()
 
     {
+        PlayerHandler handler = new PlayerHandler();
+        int numPlayers = handler.NumberOfPlayers();
+
+
+        handler.CreatePlayers(numPlayers);
+
         CardPile pile = new CardPile();
         pile.CreateNewCardPile();
         pile.GetFirstCard().ShowCard(); //test
@@ -17,13 +23,19 @@ class Program
     {
         
     }
+
+    public static bool CheckColorAndNumber(Card playerCards, Card topCard)
+    {
+        if (playerCards.color.Equals(topCard)|| playerCards.name.Equals(topCard)) return true;
+        else return false;
+
+    }
     public static void Main()
     {
         CardPile hiddenPile=StartNewGame();
 
         Console.WriteLine("PLAY UNO!");
         StartNewGame();
-
         
 
         PlayerHandler handler = new PlayerHandler();
@@ -38,7 +50,6 @@ class Program
             }
         }
 
-        
     }
     
 }
