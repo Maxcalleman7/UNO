@@ -8,12 +8,16 @@ namespace UNO
 {
     public class Player
     {
-        private string name { get; set; }
+        public string name { get; private set; }
+
+        public CardPile playerdeck { get; set; }
+
         public Player() //spelarkonstruktor
         {
 
         }
 
+        
         
        public string GetName() //Hämta spelarens namn
         {
@@ -28,6 +32,13 @@ namespace UNO
             
             return name;
         }
+
+        public void SetDeck()
+        {
+            playerdeck = new CardPile();
+
+        }
+
 
     }
 }
