@@ -50,5 +50,8 @@ namespace UNO
                 
             }
         }
+
+        public Card GetFirstCard() //hämtar första kortet i högen, skapa separat metod för att dra, annars stannar kortet i högen
+        { return cards[0]; }
     }
 }

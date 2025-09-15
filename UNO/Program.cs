@@ -14,14 +14,16 @@ class Program
 
         CardPile pile = new CardPile();
         pile.CreateNewCardPile();
+        pile.GetFirstCard().ShowCard(); //test
         pile.ShuffleCards();
+        
     }
     public static void Main()
     {
         Console.WriteLine("PLAY UNO!");
         StartNewGame();
 
-
+        handler.CreatePlayers(numPlayers);
 
     }
 }
