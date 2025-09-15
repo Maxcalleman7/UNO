@@ -14,7 +14,7 @@ namespace UNO
 
         public Player() //spelarkonstruktor
         {
-
+            playerdeck= new CardPile();
         }
 
         
@@ -33,12 +33,7 @@ namespace UNO
             return name;
         }
 
-        public void SetDeck()
-        {
-            playerdeck = new CardPile();
-
-        }
-
+       
 
     }
 }

@@ -8,9 +8,12 @@ namespace UNO
 {
     public class PlayerHandler
     {
-        public PlayerHandler()
-        {
 
+        public List<Player> players {  get; private set; }
+        public PlayerHandler() 
+
+        {
+            players = new List<Player>();
 
 
         }

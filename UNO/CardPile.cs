@@ -9,13 +9,16 @@ namespace UNO
 {
     public class CardPile
     {
+        public List<Card> cards {  get; private set; }
+        public CardPile() { cards = new List<Card>(); }
+
         List<string> colors = new List<string> { "Red", "Blue", "Green", "Yellow" }; 
 
         List<string> name = new List<string> { 
             "0", "1","1", "2","2", "3","3", "4","4", "5","5", "6","6", "7","7", "8","8", "9","9",
             "Block", "Block", "Reverse", "Reverse","Draw_two","Draw_two"};
 
-        List<Card> cards = new List<Card>();
+        
 
         public void CreateNewCardPile()
         {
@@ -49,6 +52,15 @@ namespace UNO
 
                 
             }
+        }
+
+        public Card PullCard(int cardPos)
+        {
+            Card pulledCard=GetFirstCard();
+
+            cards.RemoveAt(cardPos);
+
+            return pulledCard;
         }
 
         public Card GetFirstCard() //hämtar första kortet i högen, skapa separat metod för att dra, annars stannar kortet i högen
