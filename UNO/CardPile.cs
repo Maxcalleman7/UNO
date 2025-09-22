@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -56,7 +57,7 @@ namespace UNO
 
         public Card PullCard(int cardPos)
         {
-            Card pulledCard=GetFirstCard();
+            Card pulledCard=cards[cardPos];
 
             cards.RemoveAt(cardPos);
 
@@ -65,12 +66,22 @@ namespace UNO
 
         public void PlaceCard(Card placedCard)
         {
+
+            List<Card> cardscopy=new List<Card>(cards);
+            cards.Clear();
+
             cards.Add(placedCard);
+            for (int i = 0; i < cardscopy.Count; i++)
+            {
+                cards.Add(cardscopy[i]);
+            }
+                
         }
 
 
         public Card GetFirstCard() //hämtar första kortet i högen, skapa separat metod för att dra, annars stannar kortet i högen
         { return cards[0]; }
+
 
         public void Showdeck()
         {
@@ -80,5 +91,6 @@ namespace UNO
                 cards[i].ShowCard();
             }
         }
+
     }
 }
