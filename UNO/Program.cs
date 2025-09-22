@@ -10,7 +10,7 @@ class Program
         
         CardPile pile = new CardPile();
         pile.CreateNewCardPile();
-        pile.GetFirstCard().ShowCard(); //test
+        /*pile.GetFirstCard().ShowCard();*/ //test
         pile.ShuffleCards();
         
         return pile;
@@ -33,9 +33,9 @@ class Program
         CardPile hiddenPile=CreateDeck();
 
         Console.WriteLine("PLAY UNO!");
+
         CreateDeck();
         CardPile PlayingPile = new CardPile();
-
 
         PlayerHandler handler = new PlayerHandler();
         int numPlayers = handler.NumberOfPlayers();
@@ -48,6 +48,7 @@ class Program
                 handler.players[i].playerdeck.cards.Add(hiddenPile.PullCard(0));
             }
         }
+
 
         hiddenPile.PullCard(0); 
 
@@ -83,6 +84,7 @@ class Program
 
             }
         }
+
 
     }
     

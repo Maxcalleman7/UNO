@@ -64,9 +64,24 @@ namespace UNO
             return pulledCard;
         }
 
+        public void PlaceCard(Card placedCard)
+        {
+            cards.Add(placedCard);
+        }
+
+
         public Card GetFirstCard() //hämtar första kortet i högen, skapa separat metod för att dra, annars stannar kortet i högen
         { return cards[0]; }
 
-        
+
+        public void Showdeck()
+        {
+            for (int i = 0; i < cards.Count; i++)
+            {
+                Console.Write("|pos:"+i);
+                cards[i].ShowCard();
+            }
+        }
+
     }
 }
