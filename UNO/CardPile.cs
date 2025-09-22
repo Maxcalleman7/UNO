@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -65,5 +66,7 @@ namespace UNO
 
         public Card GetFirstCard() //hämtar första kortet i högen, skapa separat metod för att dra, annars stannar kortet i högen
         { return cards[0]; }
+
+        
     }
 }
