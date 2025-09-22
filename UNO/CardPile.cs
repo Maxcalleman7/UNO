@@ -57,7 +57,7 @@ namespace UNO
 
         public Card PullCard(int cardPos)
         {
-            Card pulledCard=GetFirstCard();
+            Card pulledCard=cards[cardPos];
 
             cards.RemoveAt(cardPos);
 
@@ -66,7 +66,16 @@ namespace UNO
 
         public void PlaceCard(Card placedCard)
         {
+
+            List<Card> cardscopy=new List<Card>(cards);
+            cards.Clear();
+
             cards.Add(placedCard);
+            for (int i = 0; i < cardscopy.Count; i++)
+            {
+                cards.Add(cardscopy[i]);
+            }
+                
         }
 
 

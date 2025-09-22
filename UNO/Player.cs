@@ -42,10 +42,11 @@ namespace UNO
         {
             
 
-            Console.WriteLine("välj ett kort att lägga");
+            Console.WriteLine("\nChoose a card\n");
             playerdeck.Showdeck();
 
-            Console.WriteLine("skriv in det valda kortets pos");
+            Console.WriteLine("\n\nWrite card position\n");
+
             int chosenCardPos=Convert.ToInt32(Console.ReadLine());
 
             Card Chosencard=playerdeck.PullCard(chosenCardPos);
